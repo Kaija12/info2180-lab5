@@ -16,11 +16,14 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
+    background-color: #3498db;
+    padding: 35px 0;
+    border-radius: 8px;
 }
 
 header h1 {
-    font-size: 2em;
-    color: #0e78e3;
+    font-size: 3em;
+    color: #213142;
 }
 
 main {
@@ -83,6 +86,32 @@ main {
     border-bottom: none;
 }
 
+/*style the results table*/
+#result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#result th, #result td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Center table headings */
+#result th {
+    text-align: center;
+    background-color: #2980b9;
+    color: white;
+}
+
+/*alternate row colours*/
+#result tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#result tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
 
 @media (max-width: 500px) {
     #controls {
