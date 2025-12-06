@@ -1,1 +1,95 @@
-/* Add your own styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body background and general padding */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #0e78e3;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+} 
+
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#country {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+/* Lookup button styling */
+#lookup {
+    padding: 8px 16px;
+    font-size: 1em;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#lookup:hover {
+    background-color: #2980b9;
+}
+
+#result {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    min-height: 50px;
+}
+
+#result ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#result li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#result li:last-child {
+    border-bottom: none;
+}
+
+
+@media (max-width: 500px) {
+    #controls {
+        flex-direction: column;
+    }
+
+    #lookup {
+        width: 100%;
+    }
+}
