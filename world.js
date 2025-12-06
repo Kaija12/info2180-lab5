@@ -28,4 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 resultDiv.innerHTML = `<p>Error: ${error.message}</p>`;
             });
     });
+
+    document.getElementById("lookup-cities").addEventListener("click", () => {
+        const country = countryInput.value.trim();
+        if (!country) {
+            resultDiv.innerHTML = "<p>Please enter a country name.</p>";
+            return;
+        }
+        // Add the lookup=cities parameter
+        fetch(`world.php?country=${encodeURIComponent(country)}&lookup=cities`)
+            .then(r => r.text())
+            .then(data => resultDiv.innerHTML = data)
+            .catch(e => resultDiv.innerHTML = `<p>Error: ${e.message}</p>`);
+    });
 });
+
+
+
